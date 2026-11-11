@@ -15,6 +15,9 @@
 |---|---|
 | `ConnectionError` or `Connection refused` on port 11434 | The SSH tunnel is not running. Start it: `ssh -L 11434:localhost:11434 <user>@<ec2-host>` and keep that terminal open. |
 | `ssh: Permission denied` | Wrong key or user. Ask a helper; do not try other people's keys. |
+| `WARNING: UNPROTECTED PRIVATE KEY FILE` (Windows) | Only you may read the key file. In PowerShell: `icacls .\key.pem /inheritance:r` then `icacls .\key.pem /grant:r "$($env:USERNAME):(R)"`. Connect with `ssh -i .\key.pem -L 11434:localhost:11434 <user>@<ec2-host>`. |
+| `ssh` hangs or times out | The network may block SSH (port 22). Try a phone hotspot and tell the facilitator. |
+| `ssh` or `git` "is not recognized" (Windows) | Install Git for Windows / the OpenSSH Client (see the README checklist), then open a **new** terminal. |
 | `bind: Address already in use` (11434) | You have a local Ollama running. Use another local port: `ssh -L 11500:localhost:11434 ...` and set `OLLAMA_HOST=http://localhost:11500`. |
 | `model "..." not found` | The server does not have that model. Ask the facilitator which models are pulled; set `LLM_MODEL` / `EMBED_MODEL` to match. |
 | Very slow first answer | The model is loading into memory on the server. Later calls are faster. |

@@ -11,6 +11,28 @@ kb/*.md --> [1 Ingestion] --> Chroma "hsi_kb" --> [2 Query] --> Ollama (LLM)
                           [4 Evals + Load test] -------+
 ```
 
+## Before the workshop (do this the day before, about 20 minutes)
+
+You need a laptop where you can install Python packages and open an SSH connection. Check **from the network you will use at the venue**, or a phone hotspot, because some networks block SSH.
+
+**Windows checklist**
+1. **Python 3.10 or newer** from python.org. In the installer, tick "Add python.exe to PATH". Check: `py --version`
+2. **Git for Windows** from git-scm.com. Check: `git --version`
+3. **OpenSSH client** (built into Windows 10 and 11). Check: `ssh -V`. If missing: Settings, Apps, Optional features, add "OpenSSH Client".
+4. Do steps 1 and 2 of "Start here" below (clone, create the environment, install).
+5. Run the check script and fix every `[FAIL]`:
+   ```
+   python scripts/check_setup.py
+   ```
+6. Open the tunnel (step 4 of "Start here") and run the check again. Add `--deep` to also make one real model call:
+   ```
+   python scripts/check_setup.py --deep
+   ```
+
+macOS and Linux: Python 3, Git and SSH are usually already installed; do steps 4 to 6 the same way.
+
+If anything cannot be fixed, tell the facilitator **before** the day. A pair-up or a shared machine can be arranged.
+
 ## Start here (about 15 minutes)
 
 Do these steps **in order**. Do not skip the checks.
