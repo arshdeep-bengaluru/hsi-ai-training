@@ -1,0 +1,13 @@
+ollama
+chromadb
+fastapi
+uvicorn
+pydantic
+pyyaml
+numpy
+httpx
+requests
+streamlit
+pytest
+# take-home task (hybrid search) only:
+# rank_bm25

@@ -1,0 +1,13 @@
+# synthetic training KB lives in rag-lab/kb/ and IS committed
+# answer key: never pushed to participants
+rag-lab/facilitator/
+rag-lab/chroma_db/
+rag-lab/.venv/
+.pytest_cache/
+# Office temp/lock files
+~$*
+rag-lab/data/processed/
+__pycache__/
+.venv/
+*.pyc
+.env
