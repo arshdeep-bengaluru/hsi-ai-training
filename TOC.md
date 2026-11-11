@@ -4,7 +4,7 @@
 **Audience:** developers (Python). RAG concepts are taught from scratch.
 **Format:** full day (09:00 to 17:30). Each layer follows the same pattern: concept, then instructor code-along, then (after lunch) squad build.
 **Infra:** one shared AWS EC2 GPU instance running Ollama (LLM + embeddings); developers reach it through an SSH tunnel. It stays running after the session.
-**Content:** synthetic HSI-style knowledge base for the workshop; real documents are swapped in before go-live.
+**Content:** synthetic HSI-style knowledge base. This is a learning session: the deployed assistant is a demo, not a production system.
 **Contracts:** see `ARCHITECTURE.md`.
 
 ## Agenda
@@ -50,8 +50,6 @@
 
 ## Open items
 - Where do 14 developers push code (private GitHub org or repo)?
-- Real HSI documents: who supplies them and owns updates?
-- How do HSI staff sign in to the deployed UI (not only an IP allow-list)?
 - Region, g4dn price and G-family quota check.
 - Who facilitates, and who is the second helper? Session date?
 - Official NASSCOM brand kit (slides currently use colors taken from nasscom.in).
